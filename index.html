@@ -4,10 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FASHION | Home</title>
+    <!-- links html and css files -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
  <!-- Keyboard users can skip to go directly to the main content. -->
-  <a class="skip" href="#main">Skip to main content</a>    
+  <a class="skip" href="#main">Skip to main content</a>   
+  
+   <header class="site-header wrap">
+    <a class="logo" href="index.html" aria-label="Fashion home">
+      <span aria-hidden="true">▰</span> FASHION
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <a class="button small" href="collections.html">
+      Explore styles
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- The hero establishes the brand using bold type and yellow accents. -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">THE EVERYDAY, REIMAGINED</p>
+
+        <h1>
+          <span class="paper">LET’S</span><br>
+          EXPLORE<br>
+          <span class="yellow">UNIQUE</span><br>
+          CLOTHES.
+        </h1>
+
+        <p>Live for influential and innovative fashion.</p>
+
+        <a class="button" href="collections.html">
+          Shop the collection
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+
+        <span class="hero-note">
+          A little different. Completely you.
+        </span>
+      </div>
+
+      <div class="hero-photo">
+        <!-- The browser selects an image size appropriate to the screen. -->
+        <img
+          src="images/hero-1200.webp"
+          srcset="
+            images/hero-480.webp 480w,
+            images/hero-1200.webp 1200w
+          "
+          sizes="(max-width: 650px) 92vw, 45vw"
+          alt="Woman in a blue coat and headscarf outside a cathedral"
+          loading="eager"
+        >
 </body>
 </html>
