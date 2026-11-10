@@ -1,69 +1,92 @@
+<!-- Tells the browser this document uses HTML5. -->
 <!DOCTYPE html>
+
+<!-- Sets the language of the page to English. -->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FASHION | Home</title>
-    <!-- links html and css files -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Allows the browser to display special characters correctly. -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the page use the device's screen width. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Provides a short description for search engines. -->
+  <meta name="description" content="Explore the FASHION student website.">
+
+  <!-- Sets the text displayed in the browser tab. -->
+  <title>Home | FASHION</title>
+
+  <!-- Loads the Poppins font in four different weights. -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+
+  <!-- Connects this HTML page to the CSS stylesheet. -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
- <!-- Keyboard users can skip to go directly to the main content. -->
-  <a class="skip" href="#main">Skip to main content</a>   
-  
-   <header class="site-header wrap">
-    <a class="logo" href="index.html" aria-label="Fashion home">
+
+<!-- The home class allows CSS to target this page specifically. -->
+<body class="home">
+
+  <!-- Lets keyboard users skip the header and go to the main content. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Contains the website logo, navigation and explore button. -->
+  <header class="container header">
+
+    <!-- Clicking the logo takes the user to the homepage. -->
+    <a class="logo" href="index.html">
+      <!-- Hides the decorative symbol from screen readers. -->
       <span aria-hidden="true">▰</span> FASHION
     </a>
 
+    <!-- Groups the main links and labels them for screen readers. -->
     <nav aria-label="Main navigation">
+      <!-- Identifies Home as the page currently being viewed. -->
       <a href="index.html" aria-current="page">Home</a>
       <a href="collections.html">Collections</a>
       <a href="about.html">About</a>
     </nav>
 
-    <a class="button small" href="collections.html">
-      Explore styles
-      <span aria-hidden="true">&rarr;</span>
-    </a>
+    <!-- A link styled as a button that opens the collections page. -->
+    <a class="button" href="collections.html">Explore styles</a>
   </header>
+  <main id="main">
 
-  <main id="main" tabindex="-1">
-    <!-- The hero establishes the brand using bold type and yellow accents. -->
-    <section class="hero wrap">
-      <div class="hero-copy">
-        <p class="eyebrow">THE EVERYDAY, REIMAGINED</p>
+    <!-- Introduces the website with a headline, button and model image. -->
+    <section class="container hero">
 
+      <!-- Groups the text on one side of the hero section. -->
+      <div class="hero-text">
+
+        <!-- The main heading. Each br starts a new line. -->
         <h1>
-          <span class="paper">LET’S</span><br>
+          <!-- These classes add a white background behind LET’S. -->
+          <span class="highlight white">LET’S</span><br>
           EXPLORE<br>
-          <span class="yellow">UNIQUE</span><br>
+          <!-- This class adds a yellow background behind UNIQUE. -->
+          <span class="highlight">UNIQUE</span><br>
           CLOTHES.
         </h1>
 
-        <p>Live for influential and innovative fashion.</p>
+        <!-- A short sentence describing the website's fashion style. -->
+        <p>Live for Influential and Innovative fashion!</p>
 
-        <a class="button" href="collections.html">
-          Shop the collection
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-
-        <span class="hero-note">
-          A little different. Completely you.
-        </span>
+        <!-- Takes the user to the collections page. -->
+        <a class="button" href="collections.html">Shop Now</a>
       </div>
 
-      <div class="hero-photo">
-        <!-- The browser selects an image size appropriate to the screen. -->
+      <div class="hero-picture">
+        <!--provides the default image.-->
         <img
-          src="images/hero-1200.webp"
-          srcset="
-            images/hero-480.webp 480w,
-            images/hero-1200.webp 1200w
-          "
-          sizes="(max-width: 650px) 92vw, 45vw"
-          alt="Woman in a blue coat and headscarf outside a cathedral"
-          loading="eager"
+          src="images/hero-600.webp"
+          srcset="images/hero-300.webp 300w, images/hero-600.webp 600w"
+          sizes="(max-width: 600px) 90vw, 45vw"
+          alt="Woman wearing a fluffy pink coat and striped pink outfit"
         >
+      </div>
+
+    </section>
+
+  </main>
 </body>
 </html>
