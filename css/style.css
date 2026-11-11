@@ -1,9 +1,14 @@
-/* Includes padding and borders inside an element's set width and height. */
+/* Includes padding and borders inside the set width. */
 * {
   box-sizing: border-box;
 }
 
-/* Sets the default colours, font and line spacing for the website. */
+/* Makes links to sections scroll smoothly. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Default page colours, font and line spacing. */
 body {
   margin: 0;
   color: #111;
@@ -12,27 +17,27 @@ body {
   line-height: 1.6;
 }
 
-/* Centres the content and limits how wide it can become. */
+/* Centres content and limits its width. */
 .container {
   width: 90%;
   max-width: 1240px;
   margin: 0 auto;
 }
 
-/* Makes links use their parent's colour and removes their underline. */
+/* Removes default link underlines. */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* Keeps images inside their containers without stretching their proportions. */
+/* Keeps images inside their containers. */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Removes the default space above headings and paragraphs. */
+/* Removes default space above text. */
 h1,
 h2,
 h3,
@@ -40,21 +45,643 @@ p {
   margin-top: 0;
 }
 
-/* Keeps lines of heading text close together. */
 h1,
 h2,
 h3 {
   line-height: 1.2;
 }
 
-/* Styles the main page heading. */
 h1 {
   font-size: 56px;
   font-weight: 900;
 }
 
-/* Styles section headings. */
 h2 {
   font-size: 32px;
   font-weight: 900;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Hides the skip link until a keyboard user selects it. */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 15px;
+  padding: 12px;
+  background: #111;
+  color: #fff;
+  z-index: 5;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Shows which element has keyboard focus. */
+:focus-visible {
+  outline: 3px solid #6a39b8;
+  outline-offset: 5px;
+}
+
+/* Places header items in a row. */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 30px 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 14px;
+}
+
+/* Highlights hovered links and the current page. */
+nav a:hover,
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: #b99b00;
+  text-underline-offset: 7px;
+}
+
+/* Styles links as buttons. */
+.button {
+  display: inline-block;
+  padding: 13px 23px;
+  border: 2px solid #111;
+  border-radius: 5px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  transition:
+    transform 0.2s,
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.button:hover {
+  background: #ebd96b;
+  color: #111;
+  transform: translateY(-4px);
+}
+
+/* Places hero text and the model image beside each other. */
+.hero {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 45px 40px 0;
+  border-radius: 35px;
+  background: #f4f6f5;
+}
+
+.hero-text {
+  width: 48%;
+  padding-bottom: 40px;
+}
+
+.hero h1 {
+  margin-bottom: 25px;
+  font-size: 64px;
+  line-height: 1.25;
+}
+
+.hero-text p {
+  font-size: 16px;
+}
+
+/* Adds a yellow background behind selected words. */
+.highlight {
+  display: inline-block;
+  padding: 0 9px;
+  background: #ebd96b;
+}
+
+.white {
+  background: #fff;
+}
+
+/* Positions the image and provides a reference point for the star. */
+.hero-picture {
+  position: relative;
+  align-self: flex-end;
+  width: 52%;
+}
+
+.hero-picture img {
+  width: 100%;
+}
+
+/* Slowly rotates the decorative star. */
+.star {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #d5d5d5;
+  font-size: 50px;
+  animation: turn-star 12s linear infinite;
+}
+
+/* Yellow brand-logo strip. */
+.brands {
+  margin-top: 35px;
+  padding: 20px 0;
+  background: #ebd96b;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 25px;
+}
+
+/* Keeps complete logos visible and blends their white backgrounds. */
+.brand-logo {
+  width: 120px;
+  height: 60px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+/* Shared section spacing. */
+.section {
+  padding: 70px 0;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+/* Creates three equal card columns. */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* Crops card images to matching sizes. */
+.card img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.card a:hover img {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin: 20px 0 5px;
+}
+
+.card h3 span {
+  float: right;
+}
+
+.card p {
+  color: #606060;
+  font-size: 14px;
+}
+
+/* Sale banner with a yellow gradient. */
+.sale {
+  background: linear-gradient(110deg, #ffed5c, #e0c63c);
+}
+
+.sale-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.sale-picture {
+  width: 50%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.sale-text {
+  width: 50%;
+  padding: 30px 0;
+}
+
+.sale h2 {
+  font-size: 52px;
+}
+
+.small-print {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+/* Favourite cards use two columns. */
+.favourites {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.favourites img {
+  height: 340px;
+}
+
+/* Places app text beside the phone illustration. */
+.app-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  padding: 40px 0 70px;
+}
+
+.app-section > div {
+  width: 50%;
+}
+
+.phone {
+  width: 38%;
+}
+
+/* Centres the community section content. */
+.community {
+  padding: 60px 0;
+  text-align: center;
+  background: #e5c843;
+}
+
+.community h2 {
+  font-size: 34px;
+}
+
+/* Dark footer with four columns. */
+.footer {
+  padding: 65px 0;
+  background: #111;
+  color: #fff;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 35px;
+}
+
+.footer h2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Styles footer text and links, excluding the logo. */
+.footer p,
+.footer a:not(.logo) {
+  display: block;
+  margin-bottom: 12px;
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer a:hover {
+  color: #ebd96b;
+}
+
+/* Collections page introduction. */
+.page-heading {
+  padding: 50px 0;
+}
+
+.category-links {
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.category-links a {
+  padding: 8px 20px;
+  border: 1px solid #777;
+  border-radius: 25px;
+}
+
+/* Shared image-and-text layouts for Collections and About. */
+.collection,
+.about-intro {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 45px 0;
+}
+
+.collection {
+  border-top: 1px solid #ddd;
+}
+
+.collection > img,
+.about-intro > img {
+  width: 48%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Allows the text to fill the remaining row space. */
+.collection > div,
+.about-intro > div {
+  flex: 1;
+}
+
+.collection ul {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.notice {
+  padding: 25px;
+  margin-bottom: 40px;
+  background: #f4f6f5;
+}
+
+/* Keeps long paragraphs at a comfortable reading width. */
+.story {
+  max-width: 850px;
+}
+
+.values {
+  padding: 45px 0;
+  background: #ebd96b;
+}
+
+.values h2 {
+  font-size: 24px;
+}
+
+/* Styles the expandable FAQ questions and answers. */
+details {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+details p {
+  margin: 15px 0 0;
+}
+
+/* Animation one: the main content gently appears. */
+main {
+  animation: appear 0.6s ease-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation two: one complete star rotation. */
+@keyframes turn-star {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Adjustments for screens up to 900px wide. */
+@media (max-width: 900px) {
+  .header {
+    gap: 15px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 30px 25px 0;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .brand-logo {
+    width: 85px;
+  }
+
+  .brand-row {
+    gap: 15px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+
+  .card img {
+    height: 300px;
+  }
+
+  .sale h2 {
+    font-size: 40px;
+  }
+
+  .sale-picture {
+    height: 430px;
+  }
+
+  .collection,
+  .about-intro {
+    gap: 30px;
+  }
+
+  .about-intro h1 {
+    font-size: 42px;
+  }
+}
+
+/* Mobile layout for screens up to 600px wide. */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  /* Moves navigation onto a separate row. */
+  .header {
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .header > .button {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .header nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Stacks the hero text above the model image. */
+  .hero {
+    flex-direction: column;
+    padding: 30px 25px 0;
+  }
+
+  .hero-text,
+  .hero-picture {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-text {
+    padding-bottom: 20px;
+  }
+
+  .hero-picture {
+    max-width: 350px;
+    align-self: center;
+  }
+
+  /* Allows the logos to wrap onto multiple rows. */
+  .brand-row {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .brand-logo {
+    width: 25%;
+    height: 45px;
+  }
+
+  .section {
+    padding: 45px 0;
+  }
+
+  /* Displays cards in one column. */
+  .cards,
+  .favourites {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card img {
+    height: 400px;
+  }
+
+  .favourites img {
+    height: 270px;
+  }
+
+  /* Stacks image-and-text sections vertically. */
+  .sale-row,
+  .app-section,
+  .collection,
+  .about-intro {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .sale-picture,
+  .sale-text,
+  .app-section > div {
+    width: 100%;
+  }
+
+  .sale-picture {
+    height: 340px;
+  }
+
+  .sale-text {
+    padding: 0 0 35px;
+  }
+
+  .sale h2 {
+    font-size: 42px;
+  }
+
+  .phone {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .community h2 {
+    font-size: 26px;
+  }
+
+  /* Changes the footer to two columns. */
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Makes the introduction span both footer columns. */
+  .footer-columns > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .collection > img,
+  .about-intro > img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .about-intro h1 {
+    font-size: 38px;
+  }
+}
+
+/* Disables animation for visitors who request less motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  main,
+  .star {
+    animation: none;
+  }
+
+  .button,
+  .card img {
+    transition: none;
+  }
 }
