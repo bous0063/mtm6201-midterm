@@ -3,59 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about the FASHION student project.">
 
-  <!-- Gives search engines a short description of this page. -->
-  <meta name="description" content="Learn about the FASHION student project."><title>About | FASHION</title>
+  <title>About | FASHION</title>
 
-  <!-- Loads the Poppins font from Google Fonts. -->
+  <!-- Loads the Poppins font and shared stylesheet. -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
-
-  <!-- Connects the page to the shared CSS file. -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- The class allows CSS to style this page. The schema identifies it as a web page. -->
-<body class="main-content">
+<!-- Adds a page class and identifies this document as a web page. -->
+<body class="about" itemscope itemtype="https://schema.org/WebPage">
 
-  <!-- Lets keyboard users skip the header and reach the main content. -->
+  <!-- Lets keyboard users jump to the main content. -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Contains the logo, navigation and explore button. -->
+  <!-- Website logo and navigation. -->
   <header class="container header">
-
-    <!-- Clicking the logo opens the homepage. -->
     <a class="logo" href="index.html">
-      <!-- Hides the decorative symbol from screen readers. -->
       <span aria-hidden="true">▰</span> FASHION
     </a>
 
-    <!-- Provides links to the three website pages. -->
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="collections.html">Collections</a>
-      <a href="about.html">About</a>
+      <a href="about.html" aria-current="page">About</a>
     </nav>
 
-    <!-- A link styled as a button that opens the collections page. -->
     <a class="button" href="collections.html">Explore styles</a>
   </header>
 
-    <!-- Introduces the About page with text and a photograph. -->
-    <section class="container about-intro">
+  <main id="main" tabindex="-1">
 
+    <!-- Introduction with a heading and photograph. -->
+    <section class="container about-intro">
       <div>
         <p>THE FASHION STORY</p>
 
-          <!-- The highlight class adds a coloured background. -->
+        <h1 itemprop="name">
+          Unique clothes.<br>
           <span class="highlight">Unique you.</span>
         </h1>
+
         <p>
           Style is a chance to show the world
           a little of who you are.
         </p>
       </div>
 
-      <!--provides the default image.-->
+      <!-- Provides two image sizes for different screens. -->
       <img
         src="images/friends-600.webp"
         srcset="images/friends-300.webp 300w, images/friends-600.webp 600w"
@@ -64,11 +60,10 @@
       >
     </section>
 
-    <!-- Explains the project. The ID allows links to jump to this section. -->
+    <!-- Explains the project and credits the original designer. -->
     <section class="container section story" id="project">
       <h2>About this project</h2>
 
-      <!-- Describes the purpose of the website. -->
       <p>
         FASHION is a three-page student website created for
         the MTM6201 midterm. It explores how bold typography,
@@ -76,7 +71,6 @@
         can bring a clothing website to life.
       </p>
 
-      <!-- Credits the original design and explains the additional pages. -->
       <p>
         The homepage is based on “Shopping Website” by
         Nickelfox Design. Collections and About are original
@@ -84,23 +78,20 @@
         from the supplied PDF mockup.
       </p>
 
-      <!-- Makes it clear that this is a demonstration website. -->
       <p>
         This website demonstrates HTML and CSS.
         It does not operate a store, issue vouchers,
         collect email addresses or provide a mobile app.
       </p>
 
-      <!-- Opens the original mockup image. -->
       <a class="button" href="images/mockup-1200.webp">
         View the original mockup
       </a>
     </section>
 
-    <!-- Presents three style ideas using the shared card layout. -->
+    <!-- Three style ideas displayed using the shared card layout. -->
     <section class="values">
       <div class="container cards">
-
         <article>
           <h2>Be yourself.</h2>
           <p>Start with colours and clothes that feel like you.</p>
@@ -118,13 +109,11 @@
       </div>
     </section>
 
-    <!-- The faq ID allows links from other pages to open this section. -->
+    <!-- Expandable questions work without JavaScript. -->
     <section class="container section story" id="faq">
       <h2>Frequently asked questions</h2>
 
-      <!-- Details creates an expandable answer without JavaScript. -->
       <details>
-        <!-- Selecting the summary shows or hides the answer below it. -->
         <summary>Where should I start with an outfit?</summary>
         <p>
           Choose one piece you enjoy wearing.
@@ -133,7 +122,6 @@
         </p>
       </details>
 
-      <!-- Second question and its hidden answer. -->
       <details>
         <summary>
           How can I make a basic outfit more interesting?
@@ -144,7 +132,6 @@
         </p>
       </details>
 
-      <!-- Third question explains the limits of the student project. -->
       <details>
         <summary>
           Can I buy products or download the app here?
@@ -159,15 +146,37 @@
 
   </main>
 
-  <!-- Contains website information, useful links and design credits. -->
+  <!-- Footer information and useful links. -->
   <footer class="footer">
-
-    <!-- CSS arranges these four groups into columns. -->
     <div class="container footer-columns">
-
-      <!-- First column: website name and description. -->
       <div>
         <a class="logo" href="index.html">FASHION</a>
         <p>Complete your style with awesome clothes from us.</p>
         <p>Student design concept.</p>
       </div>
+
+      <div>
+        <h2>Company</h2>
+        <a href="about.html">About</a>
+        <a href="about.html#project">The project</a>
+      </div>
+
+      <div>
+        <h2>Quick links</h2>
+        <a href="collections.html">Collections</a>
+        <a href="index.html#favourites">Favourites</a>
+        <a href="about.html#faq">FAQs</a>
+      </div>
+
+      <div>
+        <h2>Design credits</h2>
+        <a href="https://www.figma.com/community/file/1135871952737326157/shopping-website">
+          Nickelfox Design
+        </a>
+        <a href="images/mockup-1200.webp">Original mockup</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
