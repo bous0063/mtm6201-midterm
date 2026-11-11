@@ -49,3 +49,51 @@
     <!-- Introduces the collections page. -->
     <section class="container page-heading">
       <p>THE FASHION COLLECTION</p>
+
+      <!-- Main heading; itemprop identifies it as the page name. -->
+      <h1 itemprop="name">
+        Find your <span class="highlight">style.</span>
+      </h1>
+
+      <p>
+        Three everyday collections.
+        Plenty of ways to make them your own.
+      </p>
+
+      <!-- Each link jumps to a matching section ID on this page. -->
+      <nav class="category-links" aria-label="Collection categories">
+        <a href="#hoodies">Hoodies</a>
+        <a href="#coats">Coats</a>
+        <a href="#tees">T-Shirts</a>
+      </nav>
+    </section>
+
+    <!-- Hoodies section: the ID connects it to the Hoodies link above. -->
+    <section class="container collection" id="hoodies">
+
+      <!--gives the browser two image sizes to choose from.-->
+      <img
+        src="images/hoodie-600.webp"
+        srcset="images/hoodie-300.webp 300w, images/hoodie-600.webp 600w"
+        sizes="(max-width: 600px) 90vw, 45vw"
+        alt="Woman in an orange hoodie against a grey background"
+        loading="lazy"
+      >
+
+      <!-- Groups the hoodie description, features and link. -->
+      <div>
+        <p>01 / EVERYDAY COMFORT</p>
+        <h2>Hoodies &amp; Sweatshirts</h2>
+
+        <p>
+          A relaxed hoodie is an easy place to start.
+          Pair a bright colour with simple denim and let
+          your personality do the rest.
+        </p>
+
+        <!-- A bullet list of collection features. -->
+        <ul>
+          <li>Relaxed shapes</li>
+          <li>Bold colours</li>
+          <li>Easy everyday layers</li>
+        </ul>

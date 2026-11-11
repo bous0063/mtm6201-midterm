@@ -1,0 +1,60 @@
+/* Includes padding and borders inside an element's set width and height. */
+* {
+  box-sizing: border-box;
+}
+
+/* Sets the default colours, font and line spacing for the website. */
+body {
+  margin: 0;
+  color: #111;
+  background: #fff;
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Centres the content and limits how wide it can become. */
+.container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Makes links use their parent's colour and removes their underline. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Keeps images inside their containers without stretching their proportions. */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Removes the default space above headings and paragraphs. */
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+/* Keeps lines of heading text close together. */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+/* Styles the main page heading. */
+h1 {
+  font-size: 56px;
+  font-weight: 900;
+}
+
+/* Styles section headings. */
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+}
