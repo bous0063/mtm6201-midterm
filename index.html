@@ -1,91 +1,67 @@
-<!-- Tells the browser this document uses HTML5. -->
 <!DOCTYPE html>
-
-<!-- Sets the language of the page to English. -->
 <html lang="en">
-
 <head>
-  <!-- Allows the browser to display special characters correctly. -->
   <meta charset="UTF-8">
-
-  <!-- Makes the page use the device's screen width. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the FASHION clothing website.">
 
-  <!-- Provides a short description for search engines. -->
-  <meta name="description" content="Explore the FASHION student website.">
-
-  <!-- Sets the text displayed in the browser tab. -->
   <title>Home | FASHION</title>
 
-  <!-- Loads the Poppins font in four different weights. -->
+  <!-- Loads the font and shared stylesheet. -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
-
-  <!-- Connects this HTML page to the CSS stylesheet. -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- The home class allows CSS to target this page specifically. -->
-<body class="home">
+<body class="home" itemscope itemtype="https://schema.org/WebPage">
 
-  <!-- Lets keyboard users skip the header and go to the main content. -->
+  <!-- Lets keyboard users jump to the main content. -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Contains the website logo, navigation and explore button. -->
+  <!-- Logo, navigation and explore button. -->
   <header class="container header">
-
-    <!-- Clicking the logo takes the user to the homepage. -->
     <a class="logo" href="index.html">
-      <!-- Hides the decorative symbol from screen readers. -->
       <span aria-hidden="true">▰</span> FASHION
     </a>
 
-    <!-- Groups the main links and labels them for screen readers. -->
     <nav aria-label="Main navigation">
-      <!-- Identifies Home as the page currently being viewed. -->
       <a href="index.html" aria-current="page">Home</a>
       <a href="collections.html">Collections</a>
       <a href="about.html">About</a>
     </nav>
 
-    <!-- A link styled as a button that opens the collections page. -->
     <a class="button" href="collections.html">Explore styles</a>
   </header>
-  <main id="main">
 
-    <!-- Introduces the website with a headline, button and model image. -->
+  <main id="main" tabindex="-1">
+
+    <!-- Main introduction with text and a model photograph. -->
     <section class="container hero">
-
-      <!-- Groups the text on one side of the hero section. -->
       <div class="hero-text">
-
-        <!-- The main heading. Each br starts a new line. -->
-        <h1>
-          <!-- These classes add a white background behind LET’S. -->
+        <h1 itemprop="name">
           <span class="highlight white">LET’S</span><br>
           EXPLORE<br>
-          <!-- This class adds a yellow background behind UNIQUE. -->
           <span class="highlight">UNIQUE</span><br>
           CLOTHES.
         </h1>
 
-        <!-- A short sentence describing the website's fashion style. -->
         <p>Live for Influential and Innovative fashion!</p>
 
-        <!-- Takes the user to the collections page. -->
         <a class="button" href="collections.html">Shop Now</a>
       </div>
 
       <div class="hero-picture">
-        <!--provides the default image.-->
         <img
           src="images/hero-600.webp"
           srcset="images/hero-300.webp 300w, images/hero-600.webp 600w"
           sizes="(max-width: 600px) 90vw, 45vw"
           alt="Woman wearing a fluffy pink coat and striped pink outfit"
         >
+
+        <span class="star" aria-hidden="true">✦</span>
       </div>
     </section>
-     <!-- Logos from the original mockup. -->
+
+    <!-- Brand logos included in the original design reference. -->
     <div class="brands">
       <div class="container brand-row">
         <img
@@ -144,6 +120,242 @@
       </div>
     </div>
 
+    <!-- Each card links to its matching collection. -->
+    <section class="container section">
+      <h2 class="section-title">NEW ARRIVALS</h2>
+
+      <div class="cards">
+        <article class="card">
+          <a href="collections.html#hoodies">
+            <img
+              src="images/hoodie-600.webp"
+              srcset="images/hoodie-300.webp 300w, images/hoodie-600.webp 600w"
+              sizes="(max-width: 600px) 90vw, 30vw"
+              alt="Woman in an orange hoodie against a grey background"
+              loading="lazy"
+            >
+
+            <h3>
+              Hoodies &amp; Sweatshirts
+              <span aria-hidden="true">&rarr;</span>
+            </h3>
+
+            <p>Explore Now!</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="collections.html#coats">
+            <img
+              src="images/coat-600.webp"
+              srcset="images/coat-300.webp 300w, images/coat-600.webp 600w"
+              sizes="(max-width: 600px) 90vw, 30vw"
+              alt="Woman in a pale coat and hat against a purple background"
+              loading="lazy"
+            >
+
+            <h3>
+              Coats &amp; Parkas
+              <span aria-hidden="true">&rarr;</span>
+            </h3>
+
+            <p>Explore Now!</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="collections.html#tees">
+            <img
+              src="images/tshirt-600.webp"
+              srcset="images/tshirt-300.webp 300w, images/tshirt-600.webp 600w"
+              sizes="(max-width: 600px) 90vw, 30vw"
+              alt="Woman wearing a white tee against a turquoise background"
+              loading="lazy"
+            >
+
+            <h3>
+              Tees &amp; T-Shirts
+              <span aria-hidden="true">&rarr;</span>
+            </h3>
+
+            <p>Explore Now!</p>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sale banner from the mockup, with an inactive-offer notice. -->
+    <section class="sale">
+      <div class="container sale-row">
+        <img
+          class="sale-picture"
+          src="images/payday-600.webp"
+          srcset="images/payday-300.webp 300w, images/payday-600.webp 600w"
+          sizes="(max-width: 600px) 90vw, 45vw"
+          alt="Woman wearing a yellow top and denim shorts"
+          loading="lazy"
+        >
+
+        <div class="sale-text">
+          <h2>
+            <span class="highlight white">PAYDAY</span><br>
+            SALE NOW
+          </h2>
+
+          <p>
+            Spend minimal $100 get 30% off<br>
+            voucher code for your next purchase.
+          </p>
+
+          <p>
+            <strong>1 June – 10 June 2021</strong><br>
+            *Terms &amp; Conditions apply
+          </p>
+
+          <a class="button" href="collections.html">
+            Explore the collection
+          </a>
+
+          <p class="small-print">
+            Original mockup promotion. This offer is not active.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two wider favourite collection cards. -->
+    <section class="container section" id="favourites">
+      <h2 class="section-title">Young’s Favourite</h2>
+
+      <div class="cards favourites">
+        <article class="card">
+          <a href="collections.html">
+            <img
+              src="images/friends-600.webp"
+              srcset="images/friends-300.webp 300w, images/friends-600.webp 600w"
+              sizes="(max-width: 600px) 90vw, 45vw"
+              alt="Two women wearing sunglasses against a peach background"
+              loading="lazy"
+            >
+
+            <h3>
+              Trending on Instagram
+              <span aria-hidden="true">&rarr;</span>
+            </h3>
+
+            <p>Explore Now!</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="collections.html">
+            <img
+              src="images/summer-600.webp"
+              srcset="images/summer-300.webp 300w, images/summer-600.webp 600w"
+              sizes="(max-width: 600px) 90vw, 45vw"
+              alt="Woman in a white top and denim shorts against a pink background"
+              loading="lazy"
+            >
+
+            <h3>
+              All Under $40
+              <span aria-hidden="true">&rarr;</span>
+            </h3>
+
+            <p>Explore Now!</p>
+          </a>
+        </article>
+      </div>
+
+      <p class="small-print">
+        Collection names follow the mockup; no products are offered for sale.
+      </p>
+    </section>
+
+    <!-- Original app illustration and a working project link. -->
+    <section class="container app-section">
+      <div>
+        <h2>
+          DOWNLOAD APP &amp;<br>
+          GET THE VOUCHER!
+        </h2>
+
+        <p>
+          Get 30% off for first transaction using<br>
+          Rondovision mobile app for now.
+        </p>
+
+        <p class="small-print">
+          App artwork and promotional copy from the design reference.
+          No app download or voucher is provided by this student website.
+        </p>
+
+        <a class="button" href="about.html#project">
+          About this project
+        </a>
+      </div>
+
+      <img
+        class="phone"
+        src="images/phone-600.webp"
+        srcset="images/phone-300.webp 300w, images/phone-600.webp 600w"
+        sizes="(max-width: 600px) 80vw, 38vw"
+        alt="Mobile app illustration showing a fashion catalogue"
+        loading="lazy"
+      >
+    </section>
+
+    <!-- A page link replaces the mockup's email form. -->
+    <section class="community">
+      <div class="container">
+        <h2>
+          JOIN SHOPPING COMMUNITY TO<br>
+          GET MONTHLY PROMO
+        </h2>
+
+        <p>
+          Be inspired. Explore the collection and find your own style.
+        </p>
+
+        <a class="button" href="collections.html">
+          Explore FASHION
+        </a>
+      </div>
+    </section>
+
   </main>
+
+  <!-- Website information, useful links and design credits. -->
+  <footer class="footer">
+    <div class="container footer-columns">
+      <div>
+        <a class="logo" href="index.html">FASHION</a>
+        <p>Complete your style with awesome clothes from us.</p>
+        <p>Student design concept.</p>
+      </div>
+
+      <div>
+        <h2>Company</h2>
+        <a href="about.html">About</a>
+        <a href="about.html#project">The project</a>
+      </div>
+
+      <div>
+        <h2>Quick links</h2>
+        <a href="collections.html">Collections</a>
+        <a href="index.html#favourites">Favourites</a>
+        <a href="about.html#faq">FAQs</a>
+      </div>
+
+      <div>
+        <h2>Design credits</h2>
+        <a href="https://www.figma.com/community/file/1135871952737326157/shopping-website">
+          Nickelfox Design
+        </a>
+        <a href="images/mockup-1200.webp">Original mockup</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
